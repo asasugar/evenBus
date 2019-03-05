@@ -1,0 +1,30 @@
+{
+  "name": "evenbus",
+  "version": "1.0.1",
+  "description": "Event bus js library based on publish/subscribe mode.",
+  "main": "src/bundle.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "rollup": "^1.4.1",
+    "rollup-plugin-babel": "^4.3.2"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxj95719/evenBus.git"
+  },
+  "author": "Ji_Brother",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xxj95719/evenBus/issues"
+  },
+  "homepage": "https://github.com/xxj95719/evenBus#readme"
+}
