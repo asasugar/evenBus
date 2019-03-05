@@ -1,16 +1,16 @@
-import babel from 'rollup-plugin-babel';
+import babel from "rollup-plugin-babel";
 
 export default {
-  input: 'src/main.js',
+  input: "src/main.js",
   output: {
-    file: 'bundle.js',
-    format: 'umd',
-    name: 'evenbus',
+    file: "bundle.js",
+    format: "cjs",
+    name: "evenbus",
     minify: true
   },
   plugins: [
     babel({
-      exclude: 'node_modules/**',
+      exclude: "node_modules/**"
     })
   ]
 };

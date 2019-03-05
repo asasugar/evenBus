@@ -1,9 +1,8 @@
 {
   "name": "evenbus",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Event bus js library based on publish/subscribe mode.",
-  "main": "src/bundle.js",
-  "dependencies": {},
+  "main": "./bundle.js",
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
@@ -15,6 +14,7 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
