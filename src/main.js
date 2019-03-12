@@ -6,24 +6,23 @@ export default class EvenBus {
   }
   // 监听
   on = (type, fn) => {
-    let cb = this._events.get(type)
-    if (!this._events.get(type)) {
+    let handle = this._events.get(type)
+    if (!handle) {
       this._events.set(type, fn);
-    } else if (cb && typeof cb === 'function') {
-      // 如果cb是函数说明只有一个监听者
-      this._events.set(type, [cb, fn]);
+    } else if (handle && typeof handle === 'function') {
+      // 如果handle是函数说明只有一个监听者
+      this._events.set(type, [handle, fn]);
     } else {
-      cb.push(fn)
+      handle.push(fn)
     }
     this.getListeners(type)
   };
   // 触发
   emit = (type, ...args) => {
-    let cb;
-    cb = this._events.get(type);
+    let handle = this._events.get(type);
     // 多个回调说明有多个监听
-    if (Array.isArray(cb)) {
-      for (let fn of cb) {
+    if (Array.isArray(handle)) {
+      for (let fn of handle) {
         if (args.length > 0) {
           fn.apply(this, args);
         } else {
@@ -32,9 +31,9 @@ export default class EvenBus {
       }
     } else {
       if (args.length > 0) {
-        cb.apply(this, args);
+        handle.apply(this, args);
       } else {
-        cb.call(this);
+        handle.call(this);
       }
     }
   }
