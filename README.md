@@ -1,6 +1,6 @@
 # evenbus
 
-[中文版](https://github.com/asasugar/blob/master/README.zh-CN.md)
+[中文版](https://github.com/asasugar/evenBus/blob/master/README.zh-CN.md)
 
 ## plugin setup
 
