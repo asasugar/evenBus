@@ -1,6 +1,6 @@
 # 基于发布/订阅者模式实现的 evenbus
 
-[English](https://github.com/xxj95719/evenBus/blob/master/README.md)
+[English](https://github.com/asasugar/evenBus/blob/master/README.md)
 
 ## 插件安装
 
